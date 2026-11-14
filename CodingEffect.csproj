@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <!-- System.Windows.Automation (UI Automation) を使うため -->
+    <UseWPF>true</UseWPF>
+    <Nullable>enable</Nullable>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <ApplicationHighDpiMode>PerMonitorV2</ApplicationHighDpiMode>
+    <RootNamespace>CodingEffect</RootNamespace>
+    <AssemblyName>CodingEffect</AssemblyName>
+    <!-- exe のアイコン（エクスプローラー・タスクマネージャー・ショートカットに出る） -->
+    <ApplicationIcon>assets\app.ico</ApplicationIcon>
+    <Product>Coding Effect</Product>
+    <AssemblyTitle>Coding Effect</AssemblyTitle>
+    <Version>1.1.0</Version>
+    <Authors>DoraNeko</Authors>
+    <Copyright>Copyright (c) 2026 DoraNeko</Copyright>
+    <!-- ビルドしたマシンのフォルダ名を exe に残さない -->
+    <PathMap>$(MSBuildProjectDirectory)=.</PathMap>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- トレイアイコン用に exe へ埋め込む -->
+    <EmbeddedResource Include="assets\app.ico" LogicalName="CodingEffect.app.ico" />
+  </ItemGroup>
+
+</Project>
